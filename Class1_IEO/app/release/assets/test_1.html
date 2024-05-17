@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <style type="text/css">
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:24px;
+}
+.greenColor{color:green}
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
+    </style>
+
+</head>
+ <body>
+<script>
+var pos = 0, wrongpos=0,wrongcount=0, wrongcountrepeat=0,test, test_status, question, choice, choices, chA, chB, chC,chD, correct = 0;
+var wrongquestion=new Array(5);
+var wrongchoice=new Array(5);
+var wron_ques = [
+				["",""],
+				]
+//todo - Read question from notepad
+var questions = [
+   [ "Which of the following is the living thing?","Bag","Neem Tree","Tomato","Water","B"],
+["Head : Brain :: Chest : _________.","Bones","Heart","Fingers","Skin","B"],
+["Which of the following is not made up of plastic?","Chair","Pencil box","Bottle","Bulb","D"],
+["A family which has many members is called a _________.","happy family","big family","small family","all of these","B"],
+["Which of the following items we get from plants?","Wood","Fruits","Pulses","All of these","D"],
+["Hat is used to protect which of the following part of your body?","Knee","Heart","Thumb","Head","D"],
+["Which of the following will die without food and water?","Teddy bear","Mango tree","Whale","Both (a) and (c)","D"],
+["Which of the following is used in winters?","Fan","Woollen clothes","Fresh water","None of these ","B"],
+[" Kids love to play with which of the following animals?","Dog","Rabbit","Giraffe","Both (a) and (b)","D"],
+["Which of the following is not a fruit?","Grapes","Watermelon","Cucumber ","Orange","C"],
+[" I am green coloured bird. I eat green chilly. Who am I?","Parrot","Sparrow","Crow ","Pigeon","A"],
+["Which of the following animal lives in the forest? "," Giraffe","Tiger","Zebra ","All of these ","D"],
+
+
+]
+
+function _(x){
+	return document.getElementById(x);
+}
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+//xmlhttp.open("GET","science.xml",false);
+
+
+<!--xmlhttp.send();-->
+<!--xmlDoc=xmlhttp.responseXML;-->
+<!--var x=xmlDoc.getElementsByTagName("CD");-->
+
+function renderQuestion(){
+	var flag;
+	test = _("test");
+	if(pos >= questions.length){
+		test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct.</h2>";
+		_("test_status").innerHTML = "Test Completed";
+		generate_table(correct,questions.length );
+
+		if (correct==questions.length)
+		{
+		}
+		else
+		{
+
+		test.innerHTML +="<BR>";
+		test.innerHTML += "<button onclick='WrongAnswer()'>Review</button>";
+		
+		}
+		pos = 0;
+		correct = 0;
+		return false;
+	}
+	_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+	question = questions[pos][0];
+	chA =questions[pos][1];
+	chB = questions[pos][2];
+	chC = questions[pos][3];
+	chD = questions[pos][4];
+	
+	test.innerHTML = "<h3>"+question+"</h3>";
+	test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='B'  > "+chB+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='C' > "+chC+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='D' > "+chD+"<br><br>";
+	
+	test.innerHTML += "<button onclick='renderPreviousQuestion()'>Back</button>";
+	test.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function renderPreviousQuestion(){
+var ID;
+
+	if(pos == 0)
+	{
+	pos=pos;
+	}
+	else{
+		pos--;
+	}
+	test = _("test");
+	if(pos >= questions.length){
+		test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+		_("test_status").innerHTML = "Test Completed";
+		pos = 0;
+		correct = 0;
+
+		return false;
+
+	}
+	_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+	question = questions[pos][0];
+	chA =questions[pos][1];
+	chB = questions[pos][2];
+	chC = questions[pos][3];
+	chD = questions[pos][4];
+
+	test.innerHTML = "<h3>"+question+"</h3>";
+	test.innerHTML +="<input type='radio' name='choices' value='A'> "+chA+"<br>"
+	test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+	test.innerHTML += "<button onclick='renderPreviousQuestion()'>Back</button>";
+	test.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function generate_table( correct,  total){
+if (total ==0)
+{
+}
+else
+	{
+	var table = document.createElement('table');
+	table.setAttribute('border','1');
+	table.setAttribute('width','100%')
+	var row = table.insertRow(0);
+	wrong=total-correct;
+	for (i=1;i<=2 ;i++ )
+	{
+		var row = table.insertRow(0);
+
+	for(j=1; j<=3; j++){
+		//var text = document.createTextNode(String.fromCharCode(j+64));
+		var cell = row.insertCell(j-1);
+		cell.setAttribute('align','center')
+		//cell.appendChild(text);
+
+	  if (i==2)
+	  {
+
+		  if(j==1)
+		   var cellText = document.createTextNode("Total");
+		  if(j==2)
+		   var cellText = document.createTextNode("Correct");
+		  if(j==3)
+		   var cellText = document.createTextNode("Wrong");
+	  }
+	  		//cell.appendChild(cellText);
+
+	  if (i==1)
+	  {
+		  if(j==1)
+		   var cellText = document.createTextNode(total);
+		  if(j==2)
+		   var cellText = document.createTextNode(correct);
+		  if(j==3)
+		   var cellText = document.createTextNode(wrong);
+	  }
+	  		cell.appendChild(cellText);
+	}
+	}
+	}
+document.getElementById("test_status").appendChild(table);
+}
+
+
+
+function checkAnswer(){
+if(pos<questions.length)
+{
+	choices = document.getElementsByName("choices");
+
+	for(var i=0; i<choices.length; i++){
+		if(choices[i].checked){
+			choice = choices[i].value;
+		}
+	}
+	if(choice == questions[pos][5]){
+		correct++;
+	}
+	else{
+	 wrongquestion[wrongcount]=wrongpos;
+	 wrongchoice[wrongcount]=choice;
+	 wrongcount++;
+
+	}
+	pos++;
+wrongpos++;
+
+	renderQuestion();
+	}
+}
+function WrongAnswer(){
+
+	if(wrongcountrepeat<wrongcount)
+{
+	var right, wrong;
+    var choice = wrongcountrepeat;
+	pos=wrongquestion[wrongcountrepeat];
+	wrongcountrepeat++;
+	question = questions[pos][0];
+
+    chA =questions[pos][1];
+	chB = questions[pos][2];
+	chC = questions[pos][3];
+	chD = questions[pos][4];
+	
+	test.innerHTML = "<h3>"+question+"</h3>";
+right = questions[pos][5];
+wrong = wrongchoice[choice];
+
+if(right=="A")
+		{
+
+			if(wrong =="B")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'  id='A' ><span class='greenColor'> "+chA+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B' checked='checked'><span style='color:#A52A2A'> "+chB+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'id='C'> "+chC+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="C")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'  id='A' ><span class='greenColor'> "+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B'>"+chB+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'id='C' checked='checked'> <span style='color:#A52A2A'> "+chC+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="D")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'  id='A' ><span class='greenColor'> "+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B'>"+chB+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'id='C'>  "+chC+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D' checked='checked'><span style='color:#A52A2A'> "+chD+"</span><br><br>";
+				}
+		}
+
+else if(right=="B")
+		{
+
+			if(wrong =="A")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'id='A' checked='checked'> <span style='color:#A52A2A'>"+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B' ><span class='greenColor'> "+chB+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C' id='C'> "+chC+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="C")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'  id='A' >"+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B'><span class='greenColor'> "+chB+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'id='C' checked='checked'> <span style='color:#A52A2A'> "+chC+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="D")
+				{
+
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'  id='A' > "+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B'><span class='greenColor'> "+chB+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'id='C'>  "+chC+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D' checked='checked'><span style='color:#A52A2A'> "+chD+"</span><br><br>";
+				}
+		}
+else if(right=="C")
+		{
+			if(wrong =="A")
+				{
+					test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'id='A' checked='checked'> <span style='color:#A52A2A' >"+chA+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='B' id='B' > "+chB+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C' id='C' ><span class='greenColor'> "+chC+"</span><br>";
+					test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="B")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+					test.innerHTML += "<input type='radio' name='choices' value='A' id='A'> "+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B' id='B' checked='checked'><span style='color:#A52A2A'> "+chB+"</span><br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C' id='C' ><span class='greenColor'> "+chC+"</span><br>";
+					test.innerHTML += "<input type='radio' name='choices' value='D' id='D'> "+chD+"<br><br>";
+				}
+				else if(wrong =="D")
+				{
+				test.innerHTML = "<h3>"+question+"</h3>";
+					test.innerHTML += "<input type='radio' name='choices' value='A' id='A'> "+chA+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='B' id='B' > "+chB+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C' id='C' ><span class='greenColor'> "+chC+"</span><br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D' id='D' checked='checked'><span style='color:#A52A2A'> "+chD+"</span><br><br>";
+				}
+		}
+else if (right=="D")
+		{
+			if(wrong =="A")
+				{
+					test.innerHTML = "<h3>"+question+"</h3>";
+					test.innerHTML += "<input type='radio' name='choices' value='A'id='A' checked='checked'> <span style='color:#A52A2A'>"+chA+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='B' id='B'  > "+chB+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C' id='C' > "+chC+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='D'  id='D' ><span class='greenColor'> "+chD+"</span><br><br>";
+				}
+				else if(wrong =="B")
+			{
+					test.innerHTML = "<h3>"+question+"</h3>";
+					test.innerHTML += "<input type='radio' name='choices' value='A' id='A'> "+chA+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='B' id='B' checked='checked'><span style='color:#A52A2A'> "+chB+"</span><br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C' id='C' > "+chC+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='D'  id='D' ><span class='greenColor'> "+chD+"</span><br><br>";
+					}
+				else if(wrong =="C")
+				{
+					test.innerHTML = "<h3>"+question+"</h3>";
+					test.innerHTML += "<input type='radio' name='choices' value='A' id='A'> "+chA+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='B' id='B'  > "+chB+"<br>";
+					test.innerHTML += "<input type='radio' name='choices' value='C'id='C' checked='checked'> <span style='color:#A52A2A'> "+chC+"</span><br>";
+					test.innerHTML += "<input type='radio' name='choices' value='D'  id='D' ><span class='greenColor'> "+chD+"</span><br><br>";
+				}
+		}
+	
+	test.innerHTML += "<button onclick='WrongAnswer()'>Next</button>";
+	    generate_table(0,0);
+}
+	else
+	 document.write("<b>Test completed</b>");
+	 
+}
+
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>

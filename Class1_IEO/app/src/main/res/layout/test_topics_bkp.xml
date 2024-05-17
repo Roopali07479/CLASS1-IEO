@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/Idolympiad"
+    tools:background="?attr/colorPrimary"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Relativelayout"
+        android:weightSum="1">
+    
+	<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mock Test 1"
+        android:textSize="20dp"
+        android:textColorHighlight="#3b5998"
+        android:textColor="#ffffff"
+        android:id="@+id/mtest1"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/bmock"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+		       <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mock Test 2"
+        android:textSize="20dp"
+        android:textColorHighlight="#3b5998"
+        android:textColor="#ffffff"
+        android:id="@+id/mtest2"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/bmock"
+		android:drawableLeft="@drawable/lock_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+		       <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mock Test 3"
+        android:textSize="20dp"
+        android:textColorHighlight="#3b5998"
+        android:textColor="#ffffff"
+        android:id="@+id/mtest3"
+        android:layout_marginTop="40dp"
+		            android:drawableLeft="@drawable/lock_1"
+
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/bmock"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+	
+	<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NSO Paper Year 2018"
+        android:textSize="20dp"
+        android:textColorHighlight="#3b5998"
+        android:textColor="#ffffff"
+        android:id="@+id/mtest4"
+        android:layout_marginTop="40dp"
+		            android:drawableLeft="@drawable/lock_1"
+
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/bmock"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />  
+
+		<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NSO Paper Year 2017"
+        android:textSize="20dp"
+        android:textColorHighlight="#3b5998"
+        android:textColor="#ffffff"
+        android:id="@+id/mtest5"
+        android:layout_marginTop="40dp"
+		            android:drawableLeft="@drawable/lock_1"
+
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/bmock"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+		
+
+			<TextView
+                     
+                         android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                        android:text="@string/name_label"
+						android:textStyle="bold" 
+                        />
+						
+<FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge">
+
+						
+            <include
+                android:id="@+id/googlepay_button"
+                layout="@layout/googlepay_button"
+                android:layout_width="@dimen/buy_button_width"
+                android:layout_height="@dimen/buy_button_height"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/googlepay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/googlepay_status_checking" />
+        </FrameLayout>
+		 
+	</LinearLayout>	
+
+</RelativeLayout>

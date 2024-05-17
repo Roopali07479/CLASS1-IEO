@@ -1,0 +1,16 @@
+
+
+
+
+["Select the correct word <BR>My toys_________broken","was","were","are","there","B"],
+["Select the correct word <BR>The market_________closed","was","were","are","is","A"],
+["Select the correct word <BR>Sachin tendulker _________a good cricket","are","is","was","were","B"],
+["Select the correct word <BR>Tina and mina_________good friends","is" "A","are","was","C"],
+["Select the correct word <BR>Delhi______the capital of india","are","is","was","were","B"],
+["I build bridges,who am I""A plumber","An engineer","A carpenter","A doctor","B"],
+["Ann always _________a lot of mistakes when she speaks in english","makes","make","made","maid","A"],
+["_______________ of the girls in the class did not want to play football","little","much","many","some","D"],
+["I am looking forward______birthday party","to","on","is","the","A"],
+["I make food in restarent ,people calls me","cook","chef","cooker","carpenter","B"],
+["I am policeman my work is","takecare of people","takecare of enemies","takecare of animals","takecare of trees","A"],
+["I am army soldier I fights for_________","city","state","village","country","D"],

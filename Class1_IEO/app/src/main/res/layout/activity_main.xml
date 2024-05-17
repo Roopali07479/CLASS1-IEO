@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    tools:background="@color/colorWhite"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Relativelayout"
+        android:gravity="center|right"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:text="CLASS - 1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#3b5998"
+            android:layout_marginTop="25dp"
+            />
+        <TextView
+            android:text="IEO - ENGLISH OLYMPIAD"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#3b5998"
+            android:layout_marginTop="25dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Syllabus"
+            android:textSize="20dp"
+            android:textColorHighlight="#3b5998"
+            android:textColor="#ffffff"
+            android:id="@+id/bsyllabus"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/bmock"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/bpractice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/bsyllabus"
+            android:layout_marginTop="45dp"
+            android:layout_weight="0.07"
+            android:background="@color/colorPrimaryDark"
+            android:text="Practice Paper"
+            android:textColor="#ffffff"
+            android:textColorHighlight="#3b5998"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mock Test"
+
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textColorHighlight="#3b5998"
+            android:id="@+id/bmock"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/tques"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.09">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</RelativeLayout>

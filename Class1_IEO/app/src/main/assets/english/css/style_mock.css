@@ -1,0 +1,45 @@
+	body {color:#666; font-family:georgia; margin:0; padding-bottom:75px;}
+.radio-toolbar input[type="radio"] {display:none;}
+#test { padding:0 15px;}
+#test_status {font-size:16px; padding:0 15px; color:#8f8f8f; font-family:Arial; text-align:left}
+#test_status u {color:#666; }
+h3.ques {color:#435b89}
+h3.ques img { margin-top:15px; max-width:300px;}
+.answer-row img { max-width:250px;}
+.answer-row {padding:10px 8px; background:#fff; box-shadow:0 0 5px rgba(0,0,0,0.1); margin-bottom:10px; font-size:14px; color:#000; border:1px solid #f2f2f2; border-radius:5px;}
+.answer-row input[type=radio] { margin-right:10px; vertical-align:top;}
+.answer-row.right-ans { background:#e8faf2;  border:1px solid #1eba25; position:relative } /* color:#24b624;font-weight:bold  */
+.answer-row.green-ans { background:#e8faf2;  border:1px solid #1eba25; position:relative } /* color:#24b624;font-weight:bold  */
+.answer-row.green-ans::after  { position:absolute; content:"correct"; bottom:5px; right:15px; font-family:Arial; font-size:10px; text-transform:uppercase; color:#1eba25}
+.answer-row.wrong-ans { background:#fae8e8; border:1px solid #de6363; position:relative} /* color:#A52A2A;font-weight:bold*/
+.answer-row.wrong-ans::after  { position:absolute; content:"your answer"; bottom:5px; right:15px; font-family:Arial; font-size:10px; text-transform:uppercase; color:#de6363}
+.solution-row { background:#ebfae8; border:1px solid #f2f2f2; box-shadow:0 0 2px rgba(0,0,0,0.1); padding:15px; margin:25px -15px 0;}
+.solution-row h4 {color:#4cb34a; font-family:Arial; font-size:13px; margin:0 0 5px; padding:0}
+.solution-row p {color:#666; font-size:13px; margin:0; vertical-align:top}
+.solution-row p strong {font-size:15px; vertical-align:top}
+.footer-btn { background:#fff; padding:15px;  /*position:fixed; bottom:0; left:0; box-sizing:border-box;  */width:100%; box-shadow:0 0 5px rgba(0,0,0,0.1); margin:25px -15px 0}
+.footer-btn input[type=button],.footer-btn button, .review-text-btn {border-radius:25px; box-sizing:border-box; padding:12px 25px; min-width:80px; font-size:12px; text-transform-uppercase; background:#677da9; color:#fff; text-align:center; cursor:pointer; border:1px solid #677da9; text-transform:uppercase; transition:all 0.3s ease; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease}
+.footer-btn input[type=button]:hover,.footer-btn button:hover, .review-text-btn:hover { background:#3e5581}
+.you-got {}
+.you-got .ans {font-size:30px; color:#3e5581  }
+.you-got .length {font-size:30px; color:#666 }
+.result-table {border:1px solid #8da6d4; border-collapse:collapse; }
+.result-table td { padding:10px 15px; color:#666; border:1px solid #8da6d4 }
+.result-table tr:nth-child(1) td { background:#bfd0f2; color:#3e5581;}
+.test-completed {  }
+.footer-btn .back-btn {float:left;}
+.footer-btn .next-btn {float:right;}
+.cl {clear:both;}
+.timer-pic {padding:0 0 0 10px; width:40px;}
+.timer-pic img {vertical-align:middle}
+.timer-text {vertical-align:left; text-align:left}
+.radio-toolbar label {display:inline-block; background-color:#ddd; padding:4px 11px; font-family:Arial; font-size:24px;}
+.greenColor{color:green}
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
+.paging {  border-left:0; border-right: 0; width:100%; box-sizing: border-box; overflow: auto; display: flex; justify-content:flex-start; padding:0; }
+.paging ul {list-style: none; margin:0; padding:0;   font-weight: normal; justify-content: center; display: flex; }
+.paging ul li {padding:0; display: block; border-right:1px solid #fff;}
+.paging ul li a {padding:10px 15px; display: inline-block; background:#677da9; color:#fff; text-decoration: none; font-size: 12px; font-weight: normal}
+.paging ul li a:hover, .paging ul li a.active {background:#3e5581}

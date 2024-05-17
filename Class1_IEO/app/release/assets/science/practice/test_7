@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="../css/style.css" rel="stylesheet" />
+</head>
+ <body>
+<script type="text/javascript" src="../../practise_code.js"></script>
+<script>
+//AIR AND WATER
+
+var questions = [
+
+["_________ covers major part of earth","Salt water", "Fresh water","Trees","Surface","A"],
+["Which of the following statement is correct? ","We should throw garbage in water.","Dirty air is good for health.","We should drink impure water.","Loss of water can cause a plant to die.","D"],
+["Which of the following is a natural water source? ","Pond","Water tank","River dam","Well","A"],
+["Which of the following is helpful to dry clothes","Moving air","Wet air","Hot water","Still air","A"],
+["________ does not contain air","Balloon","Tyre","Football","Water bottle","D"],
+["If Riddhima is blowing air into a balloon, then balloon becomes bigger. What does it mean?","Air takes up space","Air is present all around us","Ait contains dust and smoke","Air has weight","A"],
+["Moving air is called - ","Rain","Wind","Rain","Smoke","B"],
+["Humans , Plants and Animals need _______ to breathe.","Air","Water","Food","All of the above","D"],
+["People _______ to clean dirty water.","Boiling","Filtering","Both A & B","None","C"],
+["Gas is used to breathe. "," Hydrogen","Carbon Di Oxide","Oxygen","Methane","C"],
+
+
+
+]
+
+</script>
+<table><tr>
+  <td class="timer-pic"><img src="../images/timer.png" width="30"  /></td><td class="timer-text"><p id="demo" ></p></td> 
+</tr>
+</table>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>

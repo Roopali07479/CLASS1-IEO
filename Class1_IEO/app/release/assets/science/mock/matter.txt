@@ -1,0 +1,4 @@
+["The word atom is from a greek word","SMALL","UNSEEN","VISIBLE","INVISIBLE","D"],
+
+["All matter is made up of tiny particals called-----","ATOMS","SPACE","VOLUME","GASES","A"],
+["If a metal can be drawn into wires relatively it is called","MALLEABLE","TACTILE","DUCKTILE","EXCTRACTIVE","C"],

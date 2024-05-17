@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:18px;
+}
+.greenColor{color:green}
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
+#visit_return_button{
+    background-color:#00a3b2;
+    border: 2px solid #2a25bd;
+    color: #FFF;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    }
+    </style>
+
+</head>
+ <body>
+<script type="text/javascript" src="../../practise_code.js"></script>
+<script>
+
+//todo - Read question from notepad
+var questions = [
+["Choose the odd word out","Railway station","River","Train","Ticket","B"],
+["Identify the picture -<BR> <img src='../images/rain.JPG'>","Bubble","Rainbow","Sun","Star","B"],
+["Identify the picture and fill in the blanks to form the correct spelling. <BR>  BALL_ _N <BR><img src='../images/baloon.JPG'>","BALL U U N","BALL O O N","BALL U O N","BALL O U N","B"],
+["Arrange the letters to form a meaningful word.<BR> Plca ","Palc","Clap","Plac","Calp","B"],
+
+
+["opposite words - <BR> Short","Long","Small","Fat","Big","A"],
+["opposite words - <BR> little","Long","Small","Fat","Big","D"],
+["opposite words - <BR> UP","On","Under","Down","UP","C"],
+["opposite words - <BR> Out","On","Under","in","Out","C"],
+["opposite words - <BR> Tall","Big","Short","Small","Long","B"],
+["opposite words - <BR> Clean","Dirty","White","Smelly","None","A"],
+["opposite words - <BR> Happy","Sad","Cry","Smilie","None","A"],
+["opposite words - <BR> Thick","Big","Thin","Small","Wide","B"],
+["opposite words - <BR> Hard","Soft","Tough","Small","Wide","A"],
+["opposite words - <BR> Old","Tired","Young","Gold","None","B"],
+
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> _____Bag","A","AN","both","None","A"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> _____Egg","A","AN","both","None","B"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> There is ___ mouse in the garden.","A","AN","both","None","A"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> Meet me in __ hour.","A","AN","both","None","B"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> She lived on ___ island for many years.","A","AN","both","None","B"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> We all had __ unbelievable day.","A","AN","both","None","B"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> She said I had __ ugly dog..","A","AN","both","None","B"],
+["Vowel Sounds, When to use <B>A</B> or <B>AN</B> - <BR> Is that a picture of ___ unicorn?","A","AN","both","None","A"],
+
+
+["Choose the correct words from - These / This / That/ Those <BR> ________are my balloons.","These","This","That","Those","A"],
+["Choose the correct words from - These / This / That/ Those <BR> ________ is my car.","These","This","That","Those","C"],
+["Choose the correct words from - These / This / That/ Those <BR> Can________ plane fly?","These","This","That","Those","C"],
+["Choose the correct words from - These / This / That/ Those <BR> Are ________ flowers from your garden?","These","This","That","Those","D"],
+["Choose the correct words from - These / This / That/ Those <BR> Is _______ your pen?.","These","This","That","Those","B"],
+
+
+["Similar or Meanings of words - <BR> Wonderful - ","Good","Very Good","Bad","Very Bad","B"],
+["Similar or Meanings of words - <BR> Caring - ","Helpful","Happy","Sad","Good","A"],
+["Similar or Meanings of words - <BR> Buddy - ","Friend","Family","Enemy","Relative","A"],
+["Similar or Meanings of words - <BR> Lovely - ","Pretty","Ugly","Beautiful","Very Bad","A"],
+["Find out Animal and their babies <BR> CAT","Cub","Kitten","Lamb","Calf","B"],
+["Find out Animal and their babies <BR> DOG","Cub","Kitten","Puppy","Foal","C"],
+["Find out Animal and their babies <BR> COW","Cub","Puppy","Lamb","Calf","D"],
+["Find out Animal and their babies <BR> Horse","Cub","Foal","Lamb","Calf","B"],
+["Find out Animal and their babies <BR> Tiger","Cub","Foal","Puppy","Calf","A"],
+["Find out Animal and their babies <BR> Sheep","Cub","Lamb","Puppy","Calf","B"],
+["Find out Animal and their babies <BR> Bear","Cub","Bunny","Puppy","Calf","B"],
+["Find out Animal and their babies <BR> Goat","Cub","Bunny","Kid","Calf","C"],
+["Find out Animal and their babies <BR> Hen","Chick","Bunny","Puppy","Calf","A"],
+["Find out Animal and their babies <BR> Duck","Fawn","Duckling","Puppy","Calf","B"],
+["Find out Animal and their babies <BR> Monkey","Infant","Kid","Puppy","Calf","A"],
+["Find out Animal and their babies <BR> Rat","Cub","Pup","Puppy","Calf","B"],
+
+["Sounds that animals create <BR> Cock","Crows","Hoots","Bells","Moos","A"],
+["Sounds that animals create <BR> Owl","Crows","Hoots","Bells","Moos","B"],
+["Sounds that animals create <BR> Cow","Crows","Hoots","Bells","Moos","D"],
+["Sounds that animals create <BR> Deer","Crows","Hoots","Bells","Moos","C"],
+["Sounds that animals create <BR> Dog","Barks","Roars","Neighs","Moos","A"],
+["Sounds that animals create <BR> Frog","Crows","Croaks","Squeaks","Quacks","B"],
+["Sounds that animals create <BR> Lion","Roars","Croaks","Squeaks","Quacks","A"],
+
+
+]
+</script>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="start|center_vertical"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:text="Test 1"/>
+    <ImageView
+        android:id="@+id/lock_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_lock_black_24dp"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

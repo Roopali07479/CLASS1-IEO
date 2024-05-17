@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:18px;
+}
+.greenColor{color:green}
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
+#visit_return_button{
+    background-color:#2a25bd;
+    border: 2px solid #2a25bd;
+    color: #FFF;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    }
+    </style>
+
+</head>
+ <body>
+<script type="text/javascript"src="../../practise_code.js"></script>
+<script>
+
+
+// Light - Reflection
+
+var questions = [
+["A body which emits light by itself is","LUMINOUS BODY","NON LUMINOUS BODY","SHADOW","OPAQUE BODY","A"],
+["Object like the sun that give out or emit own are called ________ object","NON LUMINOUS","SHADOW","LUMINOUS","STRAIGHT","C"],
+["Light travels in line--","STRAIGHT","RECTANGLE","REGULAR","TRANSPARENT","A"],
+["---are formed when an opaque object comes in the path of light","TRANSPARENT","SHADOWS","TRANSLUCENT","NONE OF THESE","B"],
+["Polished surface produce---reflection which cause glare in our eyes","NATURAL","TRANSPARENT","REGULAR","NONE OF THESE","C"],
+["---objects allow light to pass through them completely","TRANSPARENT","OPAQUE","TRANSLUCENT","ALL OF THESE","A"],
+["---objects do not allow light to pass through it at all","TRANSLUCENT","TRANSPARENT","OPAQUE","NONE OF THESE","C"],
+["--object allow the light to pass through them partially","TRANSLUCENT","TRANSPARENT","OPAQUE","NONE OF THESE","A"],
+["Stars---are source of light","UN NATURAL","NATURAL","BOTH","NONE OF THESE","B"],
+["Which one of the following is not a luminous object","LIT CANDLE","SUN","STAR","MOON","D"],
+["A--- eclipse occurs when earth comes between sun and moon in a straight line","SOLAR","LUNAR","SHADOW","NONE OF THESE","B"],
+["The shape of a shadow depends on which of the following","SHAPE OF THE OPAQUE OBJECT","COLOR OF SCREEN","COLOR OF THE OBJECT","ALL OF THESE","A"],
+["Shadows are---","ALWAYS SMALLER THAN THE OPAQUE OBJECT","ALWAYS BIGGER THEN THE OPAQUE OBJECT","REMAIN THE SAME SIZE AS OPAQUE OBJECT","CAN BE SMALLER OR BIGGER THAN THE OPAQUE OBJECT","D"],
+["Which one of the following is a living luminous object","SUN","MOON","FIRE FLY","BURNING CANDLE","C"],
+["A----is an instrument used for observing objects from a hidden position","TELESCOPE","MICROSCOPE","PERISCOPE","KALEIDOSCOPE","C"],
+["The light from the sun reaches the earth in","8.33 minutes","8.33 seconds","18.33 minutes","88.33 seconds","A"],
+["The image formed in pinhole camera is","INVERTED","ERECT","BOTH A AND B","NONE OF THESE","C"],
+["Which of the following is/are not always necessary to observe a shadow","SUN","SCREEN","SOURCE OF LIGHT","OPAQUE OBJECT","A"],
+["Pheli observed the shadow of a tree at 8.00am,12.00 noon and 3.00 pm,which of the following statements is closest to her observation about the shape and size of the shadow","THE SHAPE OF THE SHADOW OF THE TREE CHANGES BUT THE SIZE REMAINS THE SAME","THE SIZE OF THE SHADOW OF THE TREE CHANGES BUT THE SHAPE REMAINS THE SAME","BOTH THE SIZE AND SHAPE OF THE SHADOW OF THE TREE CHANGE","NEITHER THE SHAPE NOR THE SIZE OF THE SHADOW CHANGES","C"],
+["Which of the following can never from a circular shadow","A BALL","A FLAT DISC","A SHOE BOX","AN ICE CREAM CONE","C"],
+["Two students while sitting across a table looked down on to its top surface,they noticed that they could see their own and each others image,the table top is likely to be made of","UNPOLISHED WOOD","RED STONE","GLASS SHEET","WOOD TOP COVERED WITH CLOTH","C"],
+
+
+]
+</script>
+<table style="width:100%">
+<tr>
+  <td><img src="./../../images/clock.jpg" style="vertical-align:middle" /></td><td style="vertical-align:left"><p id="demo" ></p></td> 
+</tr>
+</table>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>

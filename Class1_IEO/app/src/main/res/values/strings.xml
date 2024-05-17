@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CLASS 1 - IEO </string>
+    <string name="app_id">class1_ieo</string>
+    <string name="amount">35</string>
+    <string name="action_settings">Settings</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7816665801360912/1261208991</string>
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
+    <string name="googlepay_status_checking" translatable="false"></string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
+	<string name="name_label" translatable="false"></string>
+    <string name="pub_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh9l6jON8fPzSEeZY/8V/0OCCI46bRAM081DrwiJxLZooTRLMW8xRn+1C+IAqlKTXTKAJ5LEAi/iqhuLujm8eFn1dzqfCs/aIslK0TnW1PKiMLkFX43zMYpfDE2Dds5xIlOnePPdabCTXvJ0ZYCNlVTAyoPzJdvEuJDvM/c0JJhq9VyZyWpi2Z9ffaQPuOHBVKYoDu/+cjagZqOnm14CGC8Cu2/yLCbbKUYt9mDrRLz4EsvvEaXqXUCWhuVgW9s2FPFqY+j93vrOMdlJz5GdEb6Uvt/RDjV3bilF/74nv3MwZ0x2D6xXWflLcOScB7vYbYX5D+Kp96d51y2Ugm8PgXwIDAQAB</string>
+    <string name="product_id">test_product1</string>
+    <string name="admob_app_id">ca-app-pub-7816665801360912~4078944026</string>
+    <string name="rewarded_ad_unit_id">ca-app-pub-7816665801360912/3695800647</string>
+
+</resources>

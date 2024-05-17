@@ -1,0 +1,138 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="../css/style.css" rel="stylesheet" />
+</head>
+ <body>
+<script type="text/javascript" src="../../practise_code.js"></script>
+<script>
+
+//Punctuation, Simple tenses
+
+var questions = [
+// 1
+["Has anyone----mary today,mrs Tiana asked","SEE","SAW","SEEN","SEES","C"],
+["Half of  the machinery----disteroyed in the flood this month","IS","ARE","WAS","WERE","C"],
+["The workers will only work----the owner of the factory pays them their over due wages","IF","AS","SINCE","UNLESS","A"],
+["The meeting was called--as no one could attent it","IN","UP","OFF","ALONG","C"],
+["Neither mary nor her sisters---in school this morning,jact told me when we were walking home in the evening","IS","ARE","WAS","WERE","D"],
+["The teacher decided to let the class----a break before the next lesson","TAKE","TOOK","TAKES","TAKEN","A"],
+["Not only---he---in the play,but he is also directing it","DID  ACT","IS---ACTING","DOES ACT","WAS ACTING","B"],
+["The infamous robber---was featured in the news has been caught","WHO","WHICH","WHOM","WHOSE","A"],
+["---laid down the ground rules,the teacher proceeded to let the class start their group work","HAS","HAD","HAVE","HAVING","D"],
+["The pupils made a banner to ---their support for their school team","SIGNAL","GESTURE","VISUALIZE","DEMONSTRATE","D"],
+["The suspicious looking man sensed my---and quickly moved away","PERUSAL","SCRUTINY","APPROVEL","SUPERVISION","B"],
+["Laila could not---the temptation to finish the last cookie in the jar","HOLD","REPEL","RESIST","DISPUTE","C"],
+["She --her face in pain as the nurse gave her an injection","ETCHED","POUTED","FURROWED","CONTORTED","D"],
+["Roy was like---as he made his way clumsily through the room of expensive vases","A BEE IN A BONNET","ANTS IN ONE'S PLANTS","A FLY IN THE OINTMENT","ABULL IN CHINA SHOP","D"],
+
+//2
+
+["Did you---- the chicken curry for mrrao yesterday?asked tripti","COOK","COOKS","COOKED","HAD COOKED","A"],
+["The bodybuilder tained hard daily----he would win a medal one day","SINCE","UNLESS","SO THAT","BECAUSE","C"],
+["Mr iyer,as well as his children---at science centre now","IS","ARE","WAS","WERE","A"],
+["Santosh apologised---his rude behaviour yesterday and promised not to do it again","AT","OF","FOR","ABOUT","C"],
+["I wonder--- has donated these beautiful clothes for the charity drive","WHO","WHAT","WHICH","WHOM","A"],
+["Had it not been for quick thinking,i---in the deep waters","WILL PERISH","WOULD PERISH","WILL HAVE PERISHED","WOULD HAVE PERISHED","D"],
+["One of the articles james---was published in the latest issue of pet's magazine","IS WRITTEN","HAD WRITTEN","WAS WRITTEN","WILL BE WRITING","B"],
+["You can not play computer games----you have finished your homework","IF","SO","UNLESS","DESPITE","C"],
+["Our project is still in a mess,sahaja's team and alok's team have already completed----","HIS","HERS","OURS","THEIRS","D"],
+["My grandfather had sustained a broken back while working---he had to use a wheelchair for several months","HOWEVER","OTHERWISE","NONETHELESS","CONSEQUENTLY","D"],
+
+//3 homonyms and homophones
+
+["After he was sick for several days,his face was----","PAIL","PALE","PLE","PAAL","B"],
+["She purchased to beautiful new gown---the dance","FOR","FOUR","FORE","FOOR","A"],
+["Glass containers have been----on the beach","BAND","BANNED","BANE","BOND","B"],
+["The baker systematically kneaded the-----for the bread","DOE","DOO","DOUGH","NONE OF THEM","C"],
+["I would rather receive my----electronically than on paper","MAIL","MALE","MALL","MELL","A"],
+["He was considerd----because he had no hair","BAWLED","BALD","BOLD","BOULED","B"],
+["We searched everywhere trying to----our last dog","FINE","FINED","FIND","NONE OF THEM","C"],
+["My favourite stringed instrument is the----because it is so big","BASS","BASE","WASS","VASS","A"],
+["The fight ----in the movie was extremely exciting","SEEN","SCENE","SHEEN","ceen","B"],
+["I----that lisa would wear her new dress","KNEW","NEW","NEV","NOW","A"],
+["I am not---to drink soda","ALOUD","ALLOWED","LOUD","NONE OF THEM","B"],
+["My---bought me a new bike","ANT","UNT","AUNT","ENT","C"],
+["I was so hungry,i---my entire dinner","ATE","EIGHT","AT","EAT","A"],
+["I got a new bat and----last week","BOWL","BALL","BOLL","BOLE","B"],
+["Winnie the pooh is a friendly---","BARE","BEER","BEAR","BAAR","C"],
+["What do you want to---when you grow up","BE","BEE","VE","WE","A"],
+["Where have you---all this time","WEEN","BEAN","BEEN","VEEN","C"],
+
+//4 -- ACTIVE / PASSIVE
+["My father hepls me","ACTIVE","PASSIVE","BOTH","NONE FO THEM","A"],
+["She has confessed her fault","ACTIVE","PASSIVE","BOTH","NONE OF THEM","A"],
+["The poor are helped by us","ACTIVE","PASSIVE","BOTH","NONE OF THEM","B"],
+["Where was the diary found by you","ACTIVE","PASSIVE","BOTH","NONE OF THEM","B"],
+["She had already taken the medicine","ACTIVE","PASSIVE","BOTH","NONE OF THEM","A"],
+["Would a cup of tea be taken by you","ACTIVE","PASSIVE","NONE OF THEM","BOTH","B"],
+["Promise should be kept","BOTH OF THEM","NONE OF THEM","ACTIVE","PASSIVE","D"],
+["She will help me with money","ACTIVE","PASSIVE","BOTH","NONE OF THEM","A"],
+["Who will shut the door","ACTIVE","PASSIVE","BOTH","NONE OF THEM","A"],
+["The rose is sweet when smelt","ACTIVE","PASSIVE","BOTH","NONE OF THEM","B"],
+["I can't wait to---wrap my birthday presents","IN","IM","UN","NONE OF THESE","C"],
+["Choose the odd one out","BUILD","SEPERATE","CONSTRUCT","NONE OF THESE","B"],
+
+["Find the odd one out","TEACHER-STUDENT","SHOPKEEPER-CUSTOMER","DOCTOR-LIBRARIAN","NONE OF THESE","C"],
+["You have to go----this door to reach the library","FROM","BY","THROUGH","NONE OF THESE","C"],
+["If he is planing in the marathon,he--practice regularly","SHOULD","SHALL","CAN","NONE OF THESE","A"],
+["Having been friends for years,you and ashok should--- and forget about the misunderstandings","SIT ON THE FINANCE","BURY THE HATCHET","HAVE THE LAST LAUGH","BE IN THE SAME BOAT","B"],
+["My brother is referring to the--- for inteructions to install the newly bought computer","MANUAL","GLOSSARY","DIRECTORY","MEMORANDUM","A"],
+["The strong and burly school bully---forward,towered over me and demanded my allowance","SHUFFLED","STRUGGLED","STAGGERED","SWAGGERED","D"],
+["The victim of the devastating earthquake are in---need of assistance in many areas","DIRE","GRIM","DISMAL","DISASTROUS","A"],
+["Movie buffs waited with great anticipation for the third instalment of the ---as the first two movie were well recieved worldwide","TRIO","TRIAD","TRILOGY","TRIBUNAL","C"],
+["The children--inconsolably when they heard the news that their father was involved in a worksite accident","WAILED","WHINED","SQUEALED","SCREAMED","A"],
+["Climbing to the top of mounteverest was a difficult and---journey but koo swee chiow persisted and became the first singaporean to conquer it","VIOLENT","DELICATE","ARDUOUD","SORROWFUL","C"],
+["Kate's mother---planned every detail of her daughter's birthday party such that it was huge success","ENTIRELY","EXCLUSIVELY","METICULOUSLY","CONTINUOUSLY","C"],
+["Pamela and i are just---.i do not know her very well","STRANGERS","CONFIDANTS","COMPANIONS","ACQUAINTANCES","D"],
+["Yay the examinationsare over it is time to---the class cheered in exuberance","BE RED EYED","WAVE A RED FLAG","GET OUT OF THE RED","PAINT THE TOWN ROAD","D"],
+
+
+//5 
+
+["The problem----to the children","EXPLAINED","WAS EXPLAINED","WERE EXPLAIN","NONE OF THESE","B"],
+["Those pyramids---around 400AD","WERE BUILT","BUILT","BUILTING","NONE OF THESE","A"],
+["All the trouble---by your mother","HAS CAUSED","WERE CAUSED","WAS CAUSED","NONE OF THESE","C"],
+["The visitors---a collection of old manuscripts","WERE SHOWN","HAVE SHOWN","HAS SHOWN","NONE OF THESE","A"],
+["I----him ten thousand pounds last year","LEND","LENT","WAS LENT","NONE OF THESE","B"],
+["She ---of spiders","FRIGHTENED","WAS FRIGHTENED","IS FRIGHTENED","NONE OF THESE","C"],
+["That picture ---by my grandmother","WAS PAINTED","WERE PAINTED","IS PAINTING","NONE OF THESE","A"],
+
+["I---by his attitude","SHOCKED","HAVE SHOCKED","WAS SHOCKED","NONE OF THESE","C"],
+["Excuse the mess,the house ---","IS PAINTING","IS BEING PAINTED","HAS PAINTED","NONE OF THESE","B"],
+["I knew why i---","HAD BEEN CHOSEN","HAD CHOSEN","WAS CHOSEN","NONE OF THESE","A"],
+["The principle --- forbidden smoking on the campus","HAD BEEN","HAVE BEEN","HAS BEEN","NONE OF THESE","C"],
+["I advise consulting a good doctor","CONSULTING A GOOD DOCTOR IS ADVISED","GOOD DOCTOR ADVISE","ADVISED CONSULTING AGOOD DOCTOR","NONE OF THESE","A"],
+["I did not beat her","NOT BEATEN BY ME","I AM NOT BEATEN HER","SHE WAS NOT BEATED BY ME","NONE OF THESE","C"],
+
+
+["I will never forget this experience","THIS EXPERINCE I WILL NOT FORGET","THIS EXPERIENCE WILL NEVER BE FORGOTTEN BY ME","I WILL NOT FORGET THIS EXPERIENCE","NONE OF THESE","B"],
+["Mother made a cake yesterday","A CAKE WAS MADE BY MOTHER","YESTERDAY MOTHER MADE A CAKE"," MADE THE MOTHER CAKE","NONE OF THESE","A"],
+["The boy teased the girl","TEASED THE GIRL BY BOY","THE GIRL WAS TEASED BY THE BOY","THE GIRL WERE TEASED BY BOY","NONE OF THESE","B"],
+["Did she do her duty","DUTY DID BY HER","DID SHE DO HER DUTY","WAS HER DUTY DONE BY HER","NONE OF THESE","C"],
+["The tiger was chasing the deer","THE DEER WAS BEING CHASED BY THE TIGER","TIGER CHASED BY THE DEER","CHASED THE DEER BY TIGER","NONE OF THESE","A"],
+["She has written a novel","NOVEL WRITTEN BY HER","A NOVEL HAS BEEN WRITTEN BY HER","WRITTEN BY HER THE NOVEL","NONE OF THESE","B"],
+
+
+["She has learned her lessons","HER LESSONS HAVE BEEN LEARNED BY HER","LESSONS LEARNED BY HER","HAVE BEEN LESSONS LEARNED BY HER","NONE OF THESE","A"],
+["Have you finished the report","FINISHED THE REPORT BY YOU","YOU HAVE FINISHED THE REPORT","HAS THE REPORT BEEN FINISHED BY YOU","NONE OF THESE","C"],
+["The police have caught the thief","THE THIEF HAS BEEN CAUGHT BY THE POLICE","THIEF CAUGHT BY POLICE","HAVE BEEN THIEF CAUGHT BY THE POLICE","NONE OF THESE","A"],
+["My brother has completed the work","WORK COMLETED BY MY BROTHER","THE WORK HAS BEEN COMPLETED BY MY BROTHER","MY BROTHER COMPLETD THE WORK","NONE OF THESE","B"],
+
+["Somebody stole my pen yesterday","MY PEN WAS STOLEN BY SOMEBODY YESTERDAY","YESTERDAY PEN WAS STOLEN","STOLEN PEN BY SOMEBODY","NONE OF THESE","A"],
+["Our team may win the match","THE MATCH WILL BE WON BY OUR TEAM","TEAM WILL WIN THE MATCH","THE MATCH MAY BE WON BY OUR TEAM","NONE OF THESE","C"],
+["Nurses look after patients","PATIENTS ARE LOOKED AFTER BY NURSES","LOOK AFTER PATIENTS BY NURSES","NURSES LOOK AFTER PATIENTS","NONE OF THESE","A"],
+["The boy killed the spider","SPIDER KILLED THE BOY","THE SPIDER WAS KILLED BY THE BOY","KILLED THE BOY SPIDER","NONE OF THESE","B"],
+["The boy made a kite","A KITE WAS MADE BY THE BOY","BY BOY KITE MADE","KITE MADE BY BOY","NONE OF THESE","A"],
+["Your behavior disgust me","I DON'T LIKE YOUR BEHAVIOR","I AM DISGUSTED BY YOUR BEHAVIOR","DISGUESTED BHEAVIOR BY YOU","NONE OF THESE","B"],
+
+]
+</script>
+<table><tr>
+  <td class="timer-pic"><img src="../../images/timer.png" width="30"  /></td><td class="timer-text"><p id="demo" ></p></td> 
+</tr>
+</table>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>
